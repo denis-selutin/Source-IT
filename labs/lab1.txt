@@ -1,3 +1,13 @@
+Немного полезных ссылок
+
+http://git-scm.com/book/ru/v1/%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B-Git Git общие сведения
+http://kit.znu.edu.ua/iLec/9sem/OOP/e-book/oop1.pdf   ООП
+http://www.agentlab.ru/confluence/pages/viewpage.action?pageId=41058472 Git + Eclipse
+https://bitbucket.org/Digiman/devbook/wiki/Part2/GitIDEA Git + IDEA
+
+Забегая немного вперед - определение класса
+http://developer.alexanderklimov.ru/android/java/class.php
+
 
 1) Придумайте обекты(их атрибуты и действия), описывающие некоторых работников с почасовой оплатой и фиксированной оплатой.
 
