@@ -2,10 +2,12 @@ package com.example.inheritance.ex4;
 
 import com.example.inheritance.ex3.Child;
 
+import java.io.Serializable;
+
 /**
  * Created by Denis on 5/22/2015.
  */
-public class AccessIdentifiers2 extends Child {
+public class AccessIdentifiers2 extends Child implements Cloneable, Serializable {
     public void m1() {}
 
     protected void m2() {}
