@@ -19,11 +19,12 @@ public interface Package {
      * http://www.ups.com/worldshiphelp/WS15/RUS/AppHelp/Codes/Package_Type_Codes.htm
      */
     public static enum Type {
-        T_CP("Место груза"), T_30("Палета"), T_10("Коробка UPS 10 кг", 10),
+        T_CP("Место груза"), T_30("Палета", 50), T_10("Коробка UPS 10 кг", 10),
         T_25("Коробка UPS 25 кг", 25), T_27("Средняя коробка UPS Express");
 
         private final String description;
         private final int maxWeight;
+
         private Type(String description) {
             this(description, 0);
         }

@@ -15,6 +15,7 @@ public interface DeliveryTransport {
 
         private int speed;
         private double costPerMile;
+
         private Type(int speed, double costPerMile) {
             this.speed = speed;
             this.costPerMile = costPerMile;
@@ -22,6 +23,10 @@ public interface DeliveryTransport {
 
         public int getSpeed() {
             return speed;
+        }
+
+        public double getCostPerMile() {
+            return costPerMile;
         }
     }
 }
