@@ -14,6 +14,7 @@ public interface Package {
     public Address getSenderAddress();
     public FullName getSenderFullName();
     public FullName getReceiverFullName();
+    public Stamp[] getStamps();
 
     /**
      * http://www.ups.com/worldshiphelp/WS15/RUS/AppHelp/Codes/Package_Type_Codes.htm
