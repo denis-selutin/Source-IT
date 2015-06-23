@@ -29,8 +29,10 @@ public class DeadlockExample {
     }
 
     private static class A {
-        public synchronized void doAction(A a) {
-            a.doAction(this);
+        public void doAction(A a) {
+            synchronized (this) {
+                a.doAction(this);
+            }
         }
     }
 }
