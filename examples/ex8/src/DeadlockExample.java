@@ -3,9 +3,11 @@
  */
 public class DeadlockExample {
     public static void main(String[] args) {
+        //инициаоизируем переменные с синхронизацией по обьекту
         A a1 = new A();
         A a2 = new A();
 
+        //Создаем и запускаем потоки
         Thread t1 = new Run(a1, a2);
         Thread t2 = new Run(a2, a1);
 
@@ -24,15 +26,23 @@ public class DeadlockExample {
 
         @Override
         public void run() {
-            a1.doAction(a2);
+            //вызываем наши синхронизированный метод
+            try {
+                a1.doAction(a2);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
     }
 
     private static class A {
-        public void doAction(A a) {
-            synchronized (this) {
-                a.doAction(this);
-            }
+        public synchronized void doAction(A a) throws InterruptedException {
+            //synchronized (this) {
+            //заставляем поток ждать, необходимо для того чтобы запустился врторой поток и заблокировал ресурс
+            Thread.sleep(1000);
+            //вызываем наш синхронный метод у второго обьекта, пытаясь захватить его монитор
+            a.doAction(this);
+            //}
         }
     }
 }
