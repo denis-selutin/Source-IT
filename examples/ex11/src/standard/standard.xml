@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<custom:company xmlns:custom="htts://mycustompage.html">
+    <custom:staff id="7">
+        <custom:firstname>fname 1</custom:firstname>
+        <custom:lastname>lname 1</custom:lastname>
+        <custom:nickname>lfname1</custom:nickname>
+        <custom:salary isUsual="true">100000</custom:salary>
+    </custom:staff>
+    <custom:staff id="8">
+        <custom:firstname>fname 2</custom:firstname>
+        <custom:lastname>lname 2</custom:lastname>
+        <custom:nickname>lfname 2</custom:nickname>
+        <custom:salary>200000</custom:salary>
+    </custom:staff>
+    <custom:staff id="9">
+        <custom:firstname>wer</custom:firstname>
+        <custom:lastname>wer</custom:lastname>
+        <custom:nickname>ewr</custom:nickname>
+        <custom:salary>4545</custom:salary>
+    </custom:staff>
+</custom:company>

@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="htts://mycustompage.html"
+           xmlns="htts://mycustompage.html"
+           xmlns:p="htts://mycustompage.html"
+           elementFormDefault="qualified">
+
+    <xs:element name="company" type="CompanyType">
+        <xs:unique name="uniqueId">
+            <xs:selector xpath="p:staff" />
+            <xs:field xpath="@id"/>
+        </xs:unique>
+    </xs:element>
+
+    <xs:complexType  name="CompanyType">
+        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="staff">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="firstname" type="xs:string"/>
+                        <xs:element name="lastname" type="xs:string"/>
+                        <xs:element name="nickname" type="xs:string"/>
+                        <xs:element name="salary">
+                            <xs:complexType>
+                                <xs:simpleContent>
+                                    <xs:extension base="xs:int">
+                                        <xs:attribute name="isUsual" type="xs:boolean" use="optional"/>
+                                    </xs:extension>
+                                </xs:simpleContent>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                    <xs:attributeGroup ref="IdGroup"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:attributeGroup name="IdGroup">
+        <xs:attribute name="id" type="xs:int" use="required"/>
+    </xs:attributeGroup>
+
+</xs:schema>
