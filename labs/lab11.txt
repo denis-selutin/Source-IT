@@ -1,0 +1,9 @@
+http://citforum.ru/internet/xnamsps/index.shtml#ns-decl
+http://www.i2r.ru/static/479/out_22943.shtml
+http://genberm.narod.ru/xml/lections/namespace/namespace.html#_Toc290648372
+http://zvon.org/xxl/NamespaceTutorial/Output_rus/example1.html
+http://www.liquid-technologies.com/Tutorials/XmlSchemas/XsdTutorial_03.aspx
+
+Задание: поднимаем задание №8 (Разработать программу, предназначенную для обработки данных ГАИ о владельцах автотранспорта и зарегистрированных на них автомобилей.)
+И реализовуем хранение всех данных в XML.
+Необходимо учесть добавление и удаление обьектов(узлов) из XML документа.
