@@ -1,0 +1,66 @@
+CREATE TABLE "Person"
+(
+  id integer NOT NULL,
+  "First name" text,
+  "Last name" text,
+  CONSTRAINT "Person_pkey" PRIMARY KEY (id)
+)
+
+CREATE TABLE "Tc"
+(
+  id integer NOT NULL,
+  "number" text,
+  model text,
+  CONSTRAINT "Tc_pkey" PRIMARY KEY (id)
+)
+
+CREATE TABLE "Registration"
+(
+  id integer NOT NULL,
+  owner integer,
+  car integer,
+  CONSTRAINT "Registration_pkey" PRIMARY KEY (id),
+  CONSTRAINT "Registration_car_fkey" FOREIGN KEY (car)
+      REFERENCES "Tc" (id) MATCH SIMPLE
+      ON UPDATE CASCADE ON DELETE CASCADE,
+  CONSTRAINT "Registration_owner_fkey" FOREIGN KEY (owner)
+      REFERENCES "Person" (id) MATCH SIMPLE
+      ON UPDATE CASCADE ON DELETE CASCADE
+)
+
+Person
+1;"f3";"l3"
+2;"f4";"l4"
+3;"f5";"l5"
+4;"f6";"l6"
+5;"f7";"l7"
+6;"f8";"l8"
+49;"f1";"l1"
+666;"f2";"l2"
+
+Tc
+0;"Ax56ex";"a1"
+1;"CX45676";"b2"
+2;"C34";"asd"
+3;"DF34";""
+4;"DFE4342";""
+5;"RT3451";""
+
+Registration
+0;49;0
+5;666;1
+1;49;2
+
+
+
+Получаем ВСЕХ людей и машины если есть. Если машин нет - данные заменятся на null
+SELECT p.*, r.*, c.*
+from "Person" p
+left join "Registration" r on r.owner = p.id
+left join "Tc" c on c.id = r.car;
+
+Получаем ВСЕ машины и их хозяев если есть. Если хозяев нет - данные заменятся на null
+SELECT p.*, r.*, c.*
+from "Person" p
+left join "Registration" r on r.owner = p.id
+right join "Tc" c on c.id = r.car;
