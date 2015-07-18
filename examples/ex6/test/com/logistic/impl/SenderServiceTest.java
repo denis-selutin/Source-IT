@@ -90,6 +90,7 @@ public class SenderServiceTest {
         SenderService service = new SenderServiceImpl();
         List<Transit> transits = service.calculatePossibleTransits(parcel);
 
+        System.out.println(transits);
         assert(transits.size() == 0);
     }
 }

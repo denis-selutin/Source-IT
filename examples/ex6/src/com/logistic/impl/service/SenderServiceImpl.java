@@ -45,7 +45,7 @@ public class SenderServiceImpl implements SenderService {
             List<PostOffice> transitOffices = transit.getTransitOffices();
             int maxWeightLimit = Integer.MAX_VALUE;
             for(PostOffice office : transitOffices) {
-                if(maxWeightLimit < office.getMaxWeight()) {
+                if(maxWeightLimit > office.getMaxWeight()) {
                     maxWeightLimit = office.getMaxWeight();
                 }
                 //тут можно проверять office.getAcceptableTypes() == parcel.getType()
