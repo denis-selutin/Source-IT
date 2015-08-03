@@ -22,6 +22,7 @@ public class ShowSessionServlet extends HttpServlet {
 
         PrintWriter out = resp.getWriter();
         out.write("<html><body>");
+        out.write("" + session.getAttribute("requestData") + "<br>");
         out.write("<br>Counter = " + count);
         out.write("</html></body>");
     }

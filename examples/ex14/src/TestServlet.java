@@ -26,6 +26,8 @@ public class TestServlet extends HttpServlet {
             out.println(request.getServletPath() + "<br>");
             out.println(request.getParameterMap().values() + "<br>");
 
+            out.println(request.getAttribute("auth") + "<br>");
+            out.println(request.getAttribute("requestData") + "<br>");
 
             out.println(request.getParameter("q") + "<br>");
             out.println(request.getParameterValues("q") + "<br>");
