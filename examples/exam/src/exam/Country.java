@@ -10,5 +10,5 @@ public interface Country {
     String getName();
     Long getPopulation();
     BigDecimal getSquare();
-    List<String> getStates();
+    List<State> getStates();
 }
