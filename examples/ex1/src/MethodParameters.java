@@ -1,12 +1,13 @@
 /**
  * Created by Denis on 4/27/2015.
  */
-public class MethodParameters {
+public class MethodParametersS {
     public static void main(String[] args) {
-        MethodParameters methodParameters = new MethodParameters();
+        MethodParametersS methodParameters = new MethodParametersS();
         int j = 20;
         String s = "Something";
         StringBuilder sb = new StringBuilder("Josh");
+        
 
         System.out.println("before method: " + j + " " + s + " " + sb.toString());
         methodParameters.changeData(j,s, sb);
