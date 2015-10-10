@@ -1,13 +1,13 @@
 /**
- * Created by Denis on 4/27/2015.
+ * This class has been craeted for some aim
  */
-public class MethodParametersS {
+public class MethodParameters {
     public static void main(String[] args) {
-        MethodParametersS methodParameters = new MethodParametersS();
+        MethodParameters methodParameters = new MethodParameters();
         int j = 20;
         String s = "Something";
         StringBuilder sb = new StringBuilder("Josh");
-        
+
 
         System.out.println("before method: " + j + " " + s + " " + sb.toString());
         methodParameters.changeData(j,s, sb);
